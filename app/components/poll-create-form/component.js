@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['card'],
+  classNames: ['card', 'poll-create-form'],
   poll: null,
   question: '',
   options: [],

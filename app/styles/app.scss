@@ -1,2 +1,51 @@
 @import "bourbon";
 @import "neat";
+@import "_global";
+
+$card_yellow: #EFEB9E;
+$card_blue: #9284E3;
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.card {
+  @include outer-container(640px);
+
+  background: $card_yellow;
+}
+
+.poll-create-form {
+  font-size: 2rem;
+
+  textarea, input[type="text"] {
+    font-size: inherit;
+    font-family: inherit;
+
+    display: block;
+    padding: 0.2rem 1rem;
+    width: 100%;
+
+    background: none;
+    border: none;
+    border-bottom: $card_blue 2px solid;
+    outline: none;
+
+    resize: none;
+  }
+
+  button {
+    font-size: inherit;
+    font-family: inherit;
+
+    display: block;
+    margin: 1rem auto;
+    padding: 0.2rem 1rem;
+    background: darken($card_yellow, 20%);
+    color: darken($card_blue, 15%);
+
+    border: none;
+    outline: none;
+  }
+}
