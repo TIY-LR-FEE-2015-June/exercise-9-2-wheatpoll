@@ -1,9 +1,16 @@
-<p>{{poll.question}}</p>
+<div class="container">
+  <div class="poll-results card">
+    <p>{{poll.question}}</p>
 
-<ol>
-  {{#each poll.options as |option|}}
-    {{poll-result-item poll=poll option=option}}
-  {{/each}}
-</ol>
+    <ol>
+      {{#each poll.options as |option|}}
+        {{poll-result-item poll=poll option=option}}
+      {{/each}}
+    </ol>
+  </div>
 
-{{chartist-chart type="pie" data=chartData}}
+  <div class="result-chart">
+    <h2>Results</h2>
+    {{chartist-chart type="pie" data=chartData}}
+  </div>
+</div>
