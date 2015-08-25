@@ -16,10 +16,14 @@ h1 {
   background: $card_yellow;
 }
 
-.poll-create-form {
+.poll-create-form, .poll-vote-form {
   font-size: 2rem;
 
-  textarea, input[type="text"] {
+  ol {
+    padding: 0;
+  }
+
+  textarea, input[type="text"], li {
     font-size: inherit;
     font-family: inherit;
 
@@ -47,5 +51,30 @@ h1 {
 
     border: none;
     outline: none;
+  }
+}
+
+.ember-radio-button {
+  &:before {
+    content: 'x';
+    color: rgba(0,0,0,0);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+
+    position: relative;
+    top: 4px;
+
+    border: $card_blue 2px solid;
+  }
+
+  &.checked:before {
+    color: black;
+  }
+
+  input {
+    display: none;
   }
 }

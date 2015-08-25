@@ -4,7 +4,7 @@
   <ol>
     {{#each poll.options as |option|}}
       <li>
-        {{#radio-button value=option groupValue=selected}}
+        {{#radio-button class="square-check" value=option groupValue=selected}}
           {{option.name}}
         {{/radio-button}}
       </li>
