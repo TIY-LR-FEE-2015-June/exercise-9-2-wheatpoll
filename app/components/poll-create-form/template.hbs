@@ -1,0 +1,9 @@
+<form {{action 'enter' on='submit'}}>
+  {{textarea value=question class='question' placeholder='Type in your question...'}}
+
+  {{#each options as |option|}}
+    {{input value=option.name placeholder='Enter poll option...'}}
+  {{/each}}
+
+  <button>Create Poll</button>
+</form>
