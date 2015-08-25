@@ -1,0 +1,9 @@
+<p>{{poll.question}}</p>
+
+<ol>
+  {{#each poll.options as |option|}}
+    {{poll-result-item poll=poll option=option}}
+  {{/each}}
+</ol>
+
+{{chartist-chart type="pie" data=chartData}}
